@@ -1,0 +1,22 @@
+<FilesMatch "\.(env|json|config|ini|log)$">
+    Require all denied
+</FilesMatch>
+
+DirectoryIndex index.html
+<Files "index.html">
+    Require all granted
+</Files>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^(.*)$ index.html [QSA,L]
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
