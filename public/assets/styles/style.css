@@ -29,6 +29,7 @@ h1 {
     font-family: var(--header-font);
     font-weight: 500;
     font-size: 8rem;
+    line-height: 9rem;
 }
 
 h2 {
@@ -96,6 +97,10 @@ main {
 section {
     animation: fadeIn 0.3s ease-in;
     padding: 1.5rem 0;
+}
+
+section p {
+    padding-top: 1rem;
 }
 
 @keyframes fadeIn {
