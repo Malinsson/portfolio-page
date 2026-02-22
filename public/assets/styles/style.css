@@ -110,7 +110,6 @@ section p {
 #stack .tech-category {
     font-family: var(--header-font);
     font-size: 1.2rem;
-    color: var(--highlight-color);
     border: none;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -126,13 +125,13 @@ section p {
 #stack img {
     width: 50px;
     height: 50px;
-    filter: drop-shadow(0 0 8px rgba(243, 159, 90, 0.3));
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s, filter 0.3s;
 }
 
 #stack img:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 12px rgba(243, 159, 90, 0.6));
+    filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
 }
 
 @keyframes fadeIn {
