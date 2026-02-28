@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Yrgopelago",
+      "description": "A fullstack project where I created a website for a fictional company called Yrgopelago. The website is built with JavaScript and uses SQlite as the database. The objective was to create a hotel booking system where users can book rooms, view available rooms, and manage their bookings. Users can also add on extra services to their bookings, such as breakfast or spa access. The project was completed in 2025 and is now live on the web.",
+      "tags": ["Fullstack", "SQlite", "JavaScript", "PHP"],
+      "image": "https://via.placeholder.com/150",
+      "link": "https://malinsson.se/yrgopelago/",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "name": "Butter-chicken",
+      "description": "A CLI based application built with Node.js. The application allows users to search for the best bang for buck travel destination based on their preferences. Using mathematical algorithms to calculate the best value for money, the application helps users find travel destinations that offer the most value for their budget. The project was completed in 2026 and is available on GitHub.",
+      "tags": ["Node.js", "CLI"],
+      "image": "https://via.placeholder.com/150",
+      "link": "https://github.com/Malinsson/butter-chicken",
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "name": "API Testing",
+      "description": "My first api call project. I created a simple site that makes API calls to a public API and displays the data on the page. The project was built with JavaScript and uses the Fetch API to make the API calls. The objective was to learn how to work with APIs and display data on a web page. The project was completed in 2025 and is now live on the web.",
+      "tags": ["JavaScript", "Fetch API"],
+      "image": "https://via.placeholder.com/150",
+      "link": "https://api-assignment-eta.vercel.app/",
+      "status": "Completed"
+    },
+    {
+      "id": 4,
+      "name": "Glasolsson",
+      "description": "A Laravel project where I created a website for a fictional company called Glasolsson. The website is built with Laravel and uses SQlite as the database. The objective was to create a admin panel for a glasses company where users are able to manage products and categories with the CRUD methods. MVC model is being used to create secure routes. The project is currently in progress and is expected to be completed in 2026.",
+      "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Bootstrap"],
+      "image": "https://via.placeholder.com/150",
+      "link": "https://example.com/project-delta",
+      "status": "In Progress"
+    }
+  ]
+
+}
