@@ -78,7 +78,7 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.active, .btn:hover {
     border-bottom: 3px solid var(--highlight-color);
     box-shadow: inset;
 }
@@ -126,11 +126,15 @@ section p {
 #stack img {
     width: 50px;
     height: 50px;
-    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-    transition: transform 0.3s, filter 0.3s;
 }
 
-#stack img:hover {
+#stack img, .tag {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s, filter 0.3s;
+
+}
+
+#stack img:hover, .tag:hover {
     transform: scale(1.15);
     filter: drop-shadow(0 0 12px var(--accent-color));
 }
@@ -144,6 +148,46 @@ section p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 4rem;
+}
+
+.project-card {
+    padding: 2rem 0;
+    width: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.project-card h3 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.project-card img {
+    width: 100%;
+}
+
+.tags {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
 }
 
 

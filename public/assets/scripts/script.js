@@ -10,11 +10,6 @@ async function fetchProjects() {
 
 function renderProjects(projects) {
     const container = document.getElementById('projects-container');
-    if (!container) {
-        return;
-    }
-
-    container.innerHTML = '';
 
     projects.forEach(project => {
         const projectEl = document.createElement('article');
@@ -28,15 +23,6 @@ function renderProjects(projects) {
         `;
         container.appendChild(projectEl);
     });
-}
-
-function showProjectsError(message) {
-    const container = document.getElementById('projects-container');
-    if (!container) {
-        return;
-    }
-
-    container.innerHTML = `<p>${message}</p>`;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
