@@ -158,6 +158,7 @@ section p {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     gap: 4rem;
+    scrollbar-width: none;
 }
 
 .project-card {
@@ -183,6 +184,11 @@ section p {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.tag {
+    font-size: 1rem;
+
 }
 
 .btn {

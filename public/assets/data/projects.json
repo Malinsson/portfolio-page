@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Butter-chicken",
       "description": "A CLI based application built with Node.js. The application allows users to search for the best bang for buck travel destination based on their preferences. Using mathematical algorithms to calculate the best value for money, the application helps users find travel destinations that offer the most value for their budget. The project was completed in 2026 and is available on GitHub.",
-      "tags": ["Node.js", "CLI"],
+      "tags": ["Node.js", "CLI", "NPM"],
       "image": "./assets/images/mockups/butter-chicken.png",
       "link": "https://github.com/Malinsson/butter-chicken",
       "status": "Completed"
