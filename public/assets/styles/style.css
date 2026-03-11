@@ -129,13 +129,16 @@ section p {
 }
 
 #stack img, .tag {
-    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
     transition: transform 0.3s, filter 0.3s;
 
 }
 
+#stack img:hover {
+transform: scale(1.15);
+}
+
 #stack img:hover, .tag:hover {
-    transform: scale(1.15);
     filter: drop-shadow(0 0 12px var(--accent-color));
 }
 
