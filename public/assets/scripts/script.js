@@ -30,15 +30,12 @@ function renderProjects(projects) {
         projectEl.className = 'project-card';
         projectEl.innerHTML = `
             <img src="${project.image}" alt="${project.name}">
-            <div class="project-header">
-                <h3>${project.name}</h3>
-                <small class="status">${project.status}</small>
-            </div>
+            <h3>${project.name}</h3>
+            <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <div class="project-description">
                 <p>${project.description.substring(0, 100)}<span class="dots">...</span><span class="full-description">${project.description.substring(100)}</span></p>
                 <button class="btn read-more" id="toggle-description" onclick="toggleDescription(this)">Read More</button>
             </div>
-            <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
         `;
         container.appendChild(projectEl);
@@ -88,6 +85,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const initialId = (window.location.hash || '#hero').slice(1);
     setActiveLink(initialId);
+
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
     try {
         const projects = await fetchProjects();

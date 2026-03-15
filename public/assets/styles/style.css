@@ -53,7 +53,7 @@ span {
     font-size: large;
 }
 
-nav {
+header {
     background-image: linear-gradient(rgb(23, 1, 20), rgba(255,0,0,0));
     backdrop-filter: blur(5px);
     padding: 2rem 1rem;
@@ -67,11 +67,70 @@ nav {
     z-index: 10;
 }
 
+.top-bar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    align-self: flex-end;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+    font-size: unset;
+    color: unset;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.open {
+    max-height: 70vh;
+}
+
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+    padding-top: 0.5rem;
 }
 
 nav a {
@@ -185,17 +244,12 @@ transform: scale(1.15);
     width: 100%;
 }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.project-description {
+    margin: 2rem 0;
 }
 
-.status {
-    border: 2px solid var(--highlight-color);
-    padding: 5px;
-    border-radius: 20px;
-    color: var(--highlight-color);
+.project-description p {
+    padding: 0;
 }
 
 .full-description {
@@ -210,14 +264,14 @@ transform: scale(1.15);
 }
 
 .tags {
-    margin: 1rem 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .tag {
-    font-size: 1rem;
+    font-size: 0.8em;
 
 }
 
@@ -263,8 +317,14 @@ footer {
 
 
 @media (min-width: 700px) {
-    
+
+    .hamburger {
+        display: none;
+    }
+
     nav {
+        max-height: none;
+        overflow: visible;
         flex-direction: row;
     }
 

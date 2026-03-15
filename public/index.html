@@ -6,23 +6,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Playball&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon/favicon.svg">
     <title>Malin.P Portfolio</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>Malin Persson</li>
-            <li><span>/</span></li>
-            <li>Web developer</li>
-        </ul>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#stack">Stack</a></li>
-            <li><a href="#projects">Cases</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="top-bar">
+            <p>Malin Persson</p>
+            <p><span>/</span></p>
+            <p>Web developer</p>
+        </div>
+    
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#projects">Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
 
     <main id="app">
         <section id="hero">
