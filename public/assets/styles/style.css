@@ -40,7 +40,7 @@ h2 {
 }
 
 .hero h3 {
-    line-height: 3rem;
+    line-height: 1rem;
 }
 
 h3 {
@@ -183,6 +183,30 @@ transform: scale(1.15);
 
 .project-card img {
     width: 100%;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    border: 2px solid var(--highlight-color);
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--highlight-color);
+}
+
+.full-description {
+    display: none;
+    color: white;
+}
+
+.read-more {
+    background-color: var(--primary-color);
+    font-family: var(--text-font);
+    border: none;
 }
 
 .tags {

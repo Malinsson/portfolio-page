@@ -1,3 +1,17 @@
+function toggleDescription(button) {
+    const fullDescription = button.previousElementSibling.querySelector('.full-description');
+    const dots = button.previousElementSibling.querySelector('.dots');
+    if (dots.style.display === 'none') {
+        dots.style.display = 'inline';
+        button.innerHTML = 'Read more';
+        fullDescription.style.display = 'none';
+    } else {
+        dots.style.display = 'none';
+        button.innerHTML = 'Read less';
+        fullDescription.style.display = 'inline';
+    }
+}
+
 async function fetchProjects() {
     const response = await fetch('./assets/data/projects.json');
     if (!response.ok) {
@@ -16,8 +30,14 @@ function renderProjects(projects) {
         projectEl.className = 'project-card';
         projectEl.innerHTML = `
             <img src="${project.image}" alt="${project.name}">
-            <h3>${project.name}</h3>
-            <p>${project.description}</p>
+            <div class="project-header">
+                <h3>${project.name}</h3>
+                <small class="status">${project.status}</small>
+            </div>
+            <div class="project-description">
+                <p>${project.description.substring(0, 100)}<span class="dots">...</span><span class="full-description">${project.description.substring(100)}</span></p>
+                <button class="btn read-more" id="toggle-description" onclick="toggleDescription(this)">Read More</button>
+            </div>
             <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
         `;
@@ -81,4 +101,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         showProjectsError('Could not load projects right now.');
     }
+
 });

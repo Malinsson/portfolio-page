@@ -7,7 +7,7 @@
       "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Tailwind CSS"],
       "image": "./assets/images/mockups/glasolsson.png",
       "link": "https://example.com/project-delta",
-      "status": "In Progress"
+      "status": "Completed"
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "name": "API Testing",
+      "name": "Chirper",
       "description": "My first api call project. I created a simple site that makes API calls to a public API and displays the data on the page. The project was built with JavaScript and uses the Fetch API to make the API calls. The objective was to learn how to work with APIs and display data on a web page. The project was completed in 2025 and is now live on the web.",
       "tags": ["JavaScript", "Fetch API"],
       "image": "./assets/images/mockups/API.png",
