@@ -88,11 +88,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('nav');
+    const head = document.querySelector('header');
 
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
             const isOpen = nav.classList.toggle('open');
             hamburger.classList.toggle('open', isOpen);
+            head.classList.toggle('open', isOpen);
             hamburger.setAttribute('aria-expanded', String(isOpen));
         });
 
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             link.addEventListener('click', () => {
                 nav.classList.remove('open');
                 hamburger.classList.remove('open');
+                head.classList.remove('open');
                 hamburger.setAttribute('aria-expanded', 'false');
             });
         });
