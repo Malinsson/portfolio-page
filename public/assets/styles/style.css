@@ -121,6 +121,28 @@ footer {
 }
 
 
+@media (min-width: 700px) {
+    main {
+        padding: 0 4rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    section > p {
+        max-width: 800px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+}
+
 @media (min-width: 1000px) {
 
     h1 {
@@ -129,4 +151,33 @@ footer {
         margin: 4rem 0;
     }
 }
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 7rem;
+        line-height: 7.5rem;
+        margin: 2rem 0;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    main {
+        max-width: 1400px;
+        padding: 0 6rem;
+    }
+}
+
+
+
+
 
