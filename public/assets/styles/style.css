@@ -54,7 +54,6 @@ span {
 }
 
 
-
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -96,6 +95,7 @@ section p {
 #stack img {
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
 #stack img, .tag {
@@ -110,6 +110,28 @@ transform: scale(1.15);
 
 #stack img:hover, .tag:hover {
     filter: drop-shadow(0 0 12px var(--accent-color));
+}
+
+.tech-logo-tooltip {
+    position: absolute;
+    z-index: 5;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid rgba(243, 159, 90, 0.45);
+    background: rgba(23, 1, 20, 0.86);
+    color: var(--highlight-color);
+    font-size: 0.85rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.tech-logo-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes fadeIn {

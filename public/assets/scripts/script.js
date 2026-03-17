@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const sections = document.querySelectorAll('main section');
     const yearEl = document.getElementById('year');
+    const techLogos = document.querySelectorAll('#stack .tech-logos img');
 
     if (yearEl) {
         yearEl.textContent = String(new Date().getFullYear());
@@ -107,6 +108,127 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     }
+
+    const techTooltip = document.createElement('div');
+    techTooltip.className = 'tech-logo-tooltip';
+    techTooltip.setAttribute('role', 'status');
+    techTooltip.setAttribute('aria-live', 'polite');
+    document.body.appendChild(techTooltip);
+
+    let activeLogo = null;
+    let pinnedLogo = null;
+
+    function positionTooltip(logo) {
+        if (!logo) {
+            return;
+        }
+
+        const rect = logo.getBoundingClientRect();
+        const tooltipRect = techTooltip.getBoundingClientRect();
+        let left = rect.right + window.scrollX + 12;
+        let top = rect.top + window.scrollY + (rect.height - tooltipRect.height) / 2;
+
+        if (left + tooltipRect.width > window.scrollX + window.innerWidth - 8) {
+            left = rect.left + window.scrollX - tooltipRect.width - 12;
+        }
+
+        if (left < window.scrollX + 8) {
+            left = window.scrollX + 8;
+        }
+
+        if (top < window.scrollY + 8) {
+            top = window.scrollY + 8;
+        }
+
+        if (top + tooltipRect.height > window.scrollY + window.innerHeight - 8) {
+            top = window.scrollY + window.innerHeight - tooltipRect.height - 8;
+        }
+
+        techTooltip.style.left = `${left}px`;
+        techTooltip.style.top = `${top}px`;
+    }
+
+    function showTooltip(logo, pin = false) {
+        const label = logo.dataset.logoTitle || logo.getAttribute('alt') || '';
+        if (!label) {
+            return;
+        }
+
+        activeLogo = logo;
+        if (pin) {
+            pinnedLogo = logo;
+        }
+
+        techTooltip.textContent = label;
+        techTooltip.classList.add('visible');
+        positionTooltip(logo);
+    }
+
+    function hideTooltip(force = false) {
+        if (!force && pinnedLogo) {
+            return;
+        }
+
+        techTooltip.classList.remove('visible');
+        techTooltip.textContent = '';
+        activeLogo = null;
+    }
+
+    techLogos.forEach(logo => {
+        const titleText = logo.getAttribute('title') || logo.getAttribute('alt') || '';
+        logo.dataset.logoTitle = titleText;
+        logo.removeAttribute('title');
+        logo.setAttribute('tabindex', '0');
+
+        logo.addEventListener('mouseenter', () => {
+            if (window.matchMedia('(hover: hover)').matches) {
+                showTooltip(logo, false);
+            }
+        });
+
+        logo.addEventListener('mouseleave', () => {
+            hideTooltip(false);
+        });
+
+        logo.addEventListener('focus', () => {
+            showTooltip(logo, false);
+        });
+
+        logo.addEventListener('blur', () => {
+            hideTooltip(false);
+        });
+
+        logo.addEventListener('click', () => {
+            if (pinnedLogo === logo) {
+                pinnedLogo = null;
+                hideTooltip(true);
+                return;
+            }
+
+            pinnedLogo = null;
+            showTooltip(logo, true);
+        });
+    });
+
+    document.addEventListener('click', event => {
+        const clickedLogo = event.target.closest('#stack .tech-logos img');
+        if (!clickedLogo) {
+            pinnedLogo = null;
+            hideTooltip(true);
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (activeLogo && techTooltip.classList.contains('visible')) {
+            positionTooltip(activeLogo);
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        if (activeLogo && techTooltip.classList.contains('visible')) {
+            positionTooltip(activeLogo);
+        }
+    }, { passive: true });
 
     try {
         const projects = await fetchProjects();
