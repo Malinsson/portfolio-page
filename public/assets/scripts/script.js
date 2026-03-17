@@ -125,23 +125,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const rect = logo.getBoundingClientRect();
         const tooltipRect = techTooltip.getBoundingClientRect();
-        let left = rect.right + window.scrollX + 12;
-        let top = rect.top + window.scrollY + (rect.height - tooltipRect.height) / 2;
-
-        if (left + tooltipRect.width > window.scrollX + window.innerWidth - 8) {
-            left = rect.left + window.scrollX - tooltipRect.width - 12;
-        }
+        let left = rect.left + window.scrollX + (rect.width - tooltipRect.width) / 2;
+        let top = rect.bottom + window.scrollY + 8;
 
         if (left < window.scrollX + 8) {
             left = window.scrollX + 8;
         }
 
-        if (top < window.scrollY + 8) {
-            top = window.scrollY + 8;
+        if (left + tooltipRect.width > window.scrollX + window.innerWidth - 8) {
+            left = window.scrollX + window.innerWidth - tooltipRect.width - 8;
         }
 
         if (top + tooltipRect.height > window.scrollY + window.innerHeight - 8) {
-            top = window.scrollY + window.innerHeight - tooltipRect.height - 8;
+            top = rect.top + window.scrollY - tooltipRect.height - 8;
         }
 
         techTooltip.style.left = `${left}px`;
