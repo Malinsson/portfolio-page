@@ -55,7 +55,7 @@ span {
 
 
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 2rem auto;
     padding: 0 2rem;
     border-radius: 8px;
@@ -252,5 +252,10 @@ footer {
 
 @media (min-width: 700px) {
     
+    .project-card {
+        max-width: 500px;
+    }
 
 }
+
+

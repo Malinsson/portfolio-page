@@ -127,6 +127,7 @@ nav a.active {
         -webkit-mask-image: none;
         mask-image: none;
         flex-direction: row;
+        align-items: center;
     }
 
     .top-bar {
@@ -162,4 +163,11 @@ nav a.active {
     box-shadow: inset;
 }
 
+}
+
+@media (min-width: 1000px) {
+    header {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
