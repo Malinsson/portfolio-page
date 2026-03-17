@@ -2,23 +2,24 @@
   "projects": [
     {
       "id": 1,
-      "name": "Glasolsson",
+      "name": "Glas Olsson",
+      "shortDescription": "A Laravel project for a fictional company with a functional admin panel to manage products and categories.",
       "descriptionSections": [
         {
           "title": "Overview",
-          "content": "A Laravel project where I created a website for a fictional company called Glasolsson."
+          "content": "A Laravel project crafted by me and my teammate. The goal was to create a functional admin panel for a fictional company where the user can manage products and their categories. From scratch we created a full CRUD system for both products and categories."
         },
         {
           "title": "Tech Stack",
-          "content": "The website is built with Laravel and uses SQlite as the database, following the MVC model for secure routes."
+          "content": "The website is built with Laravel and uses SQlite as the database, following the MVC model for secure routes. Tailwind CSS is used for styling to create a clean and responsive design. The Chart.js library is integrated to visualize sales data and provide insights into product performance."
         },
         {
-          "title": "Features",
-          "content": "Admin panel for a glasses company where users can manage products and categories with full CRUD methods."
+          "title": "Process",
+          "content": "We started by setting up the Laravel project and designing the database schema for products and categories. We then implemented the CRUD functionality, ensuring that users can easily create, read, update, and delete products and categories. After that, we focused on styling the admin panel with Tailwind CSS to enhance the user experience. Finally, we integrated Chart.js to display sales data in an interactive and visually appealing way. Throughout the development process, we conducted rigorous testing and debugging to ensure that all features work seamlessly and that the user interface is intuitive and responsive."
         },
         {
-          "title": "Status",
-          "content": "Currently in progress and expected to be completed in 2026."
+          "title": "Results",
+          "content": "The admin panel successfully provides a user-friendly interface for managing products and categories, with all CRUD operations functioning as expected. Our rigerous testing and debugging process ensured a smooth user experience, and the integration of Chart.js allows for insightful data visualization of sales performance."
         }
       ],
       "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Tailwind CSS"],
@@ -29,6 +30,7 @@
     {
       "id": 2,
       "name": "Yrgopelago",
+      "shortDescription": "A fullstack project for a fictional hotel company called Yrgopelago.",
       "descriptionSections": [
         {
           "title": "Overview",
@@ -55,6 +57,7 @@
     {
       "id": 3,
       "name": "Chirper",
+      "shortDescription": "A web application for interacting with a birdcall API.",
       "descriptionSections": [
         {
           "title": "Overview",
@@ -81,6 +84,7 @@
     {
       "id": 4,
       "name": "Butter-chicken",
+      "shortDescription": "A command-line application built with Node.js for finding optimal travel destinations based on budget.",
       "descriptionSections": [
         {
           "title": "Overview",

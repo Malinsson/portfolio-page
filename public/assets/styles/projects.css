@@ -139,10 +139,20 @@
     color: white;
 }
 
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
 .read-more {
     background-color: var(--primary-color);
     font-family: var(--text-font);
+    font-size: 1rem;
     border: none;
+    cursor: pointer;
 }
 
 .tags {
