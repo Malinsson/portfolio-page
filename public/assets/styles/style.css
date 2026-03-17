@@ -96,6 +96,8 @@ section p {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 #stack img, .tag {
@@ -220,6 +222,10 @@ transform: scale(1.15);
     margin-top: 2rem;
 }
 
+.contact-info a {
+    font-size: small;
+}
+
 .social {
     display: flex;
     align-items: center;
@@ -246,4 +252,5 @@ footer {
 
 @media (min-width: 700px) {
     
+
 }

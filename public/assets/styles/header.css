@@ -126,6 +126,11 @@ nav a.active {
         overflow: visible;
         -webkit-mask-image: none;
         mask-image: none;
+        flex-direction: row;
+    }
+
+    .top-bar {
+        gap: 1rem;
     }
 
     .hamburger {
@@ -145,6 +150,10 @@ nav a.active {
         backdrop-filter: none;
         border-top: none;
         border-bottom: none;
+    }
+
+    nav ul {
+        flex-direction: row;
     }
 
     nav a:hover,
