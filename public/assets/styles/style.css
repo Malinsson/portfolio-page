@@ -141,6 +141,29 @@ footer {
         line-height: 1.8;
         font-size: 1.05rem;
     }
+
+    .contact-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-info a {
+        font-size: 1.1rem;
+    }
+
+    .social {
+        gap: 1.5rem;
+    }
+
+    .icon {
+        height: 2rem;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -175,6 +198,16 @@ footer {
         max-width: 1400px;
         padding: 0 6rem;
     }
+
+    .contact-wrapper {
+        padding: 4rem;
+
+    }
+
+    .contact-info {
+        gap: 3rem 6rem;
+    }
+
 }
 
 
