@@ -1,15 +1,11 @@
 function toggleDescription(button) {
-    const fullDescription = button.previousElementSibling.querySelector('.full-description');
-    const dots = button.previousElementSibling.querySelector('.dots');
-    if (dots.style.display === 'none') {
-        dots.style.display = 'inline';
-        button.innerHTML = 'Read more';
-        fullDescription.style.display = 'none';
-    } else {
-        dots.style.display = 'none';
-        button.innerHTML = 'Read less';
-        fullDescription.style.display = 'inline';
-    }
+    const card = button.closest('.project-card');
+    const modal = card.querySelector('.description-modal');
+    modal.classList.add('open');
+}
+
+function closeModal(modal) {
+    modal.classList.remove('open');
 }
 
 async function fetchProjects() {
@@ -28,15 +24,27 @@ function renderProjects(projects) {
     projects.forEach(project => {
         const projectEl = document.createElement('article');
         projectEl.className = 'project-card';
+        
+        const sectionsHTML = project.descriptionSections.map(section => `
+            <div class="description-section">
+                <h4>${section.title}</h4>
+                <p>${section.content}</p>
+            </div>
+        `).join('');
+        
         projectEl.innerHTML = `
             <img src="${project.image}" alt="${project.name}">
             <h3>${project.name}</h3>
             <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="project-description">
-                <p>${project.description.substring(0, 100)}<span class="dots">...</span><span class="full-description">${project.description.substring(100)}</span></p>
-                <button class="btn read-more" id="toggle-description" onclick="toggleDescription(this)">Read More</button>
-            </div>
+            <button class="btn read-more" onclick="toggleDescription(this)">Read more</button>
             <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+            <div class="description-modal" onclick="if(event.target === this) closeModal(this)">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeModal(this.closest('.description-modal'))">×</button>
+                    <h3>Case study: ${project.name}</h3>
+                    ${sectionsHTML}
+                </div>
+            </div>
         `;
         container.appendChild(projectEl);
     });
