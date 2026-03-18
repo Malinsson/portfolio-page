@@ -16,6 +16,8 @@
     flex: 0 0 auto;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card h3 {
@@ -46,7 +48,7 @@
 }
 
 .description-section h4 {
-    font-family: var(--header-font);
+    font-family: var(--text-font);
     font-size: 1.1rem;
     color: var(--highlight-color);
     margin-bottom: 0.5rem;
@@ -133,18 +135,27 @@
         opacity: 1;
     }
 }
+.short-description {
+    margin: 2rem 0;
+}
 
 .full-description {
     display: none;
     color: white;
 }
 
+.card-flex {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .btn-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
     padding: 2rem 0;
+    margin-top: auto;
 }
 
 .read-more {
@@ -153,6 +164,8 @@
     font-size: 1rem;
     border: none;
     cursor: pointer;
+    border-bottom: 3px solid var(--highlight-color);
+    box-shadow: inset;
 }
 
 .tags {
@@ -168,6 +181,13 @@
 }
 
 @media (min-width: 700px) {
+
+    .btn-group {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
     
     .project-card {

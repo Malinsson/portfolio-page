@@ -36,10 +36,12 @@ function renderProjects(projects) {
             <img src="${project.image}" alt="${project.name}">
             <h3>${project.name}</h3>
             <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="short-description">${project.shortDescription}</div>
-            <div class="btn-group">
-                <button class="btn read-more" onclick="toggleDescription(this)">Read case study</button>
-                <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+            <div class="card-flex">
+                <div class="short-description">${project.shortDescription}</div>
+                <div class="btn-group">
+                    <button class="btn read-more" onclick="toggleDescription(this)">Read case study</button>
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+                </div>
             </div>
             <div class="description-modal" onclick="if(event.target === this) closeModal(this)">
                 <div class="modal-content">

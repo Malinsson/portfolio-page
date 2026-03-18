@@ -177,9 +177,9 @@ footer {
 
 @media (min-width: 1200px) {
     h1 {
-        font-size: 7rem;
+        font-size: 11rem;
         line-height: 7.5rem;
-        margin: 2rem 0;
+        margin: 6rem 0;
     }
 
     h2 {
@@ -187,7 +187,7 @@ footer {
     }
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 5rem;
     }
 
     section {
