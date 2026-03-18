@@ -55,6 +55,31 @@ function renderProjects(projects) {
     });
 }
 
+function setupCasesProgressUnderline() {
+    const container = document.getElementById('projects-container');
+    const heading = document.querySelector('#projects h2');
+
+    if (!container || !heading) {
+        return;
+    }
+
+    const updateProgress = () => {
+        if (window.matchMedia('(min-width: 1000px)').matches) {
+            heading.style.setProperty('--cases-progress', '0%');
+            return;
+        }
+
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        const progress = maxScroll > 0 ? (container.scrollLeft / maxScroll) * 100 : 0;
+        const safeProgress = Math.max(0, Math.min(100, progress));
+        heading.style.setProperty('--cases-progress', `${safeProgress}%`);
+    };
+
+    container.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const sections = document.querySelectorAll('main section');
@@ -242,6 +267,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const projects = await fetchProjects();
         renderProjects(projects);
+        setupCasesProgressUnderline();
     } catch (error) {
         console.error('Error loading projects:', error);
         if (window.location.protocol === 'file:') {
