@@ -7,7 +7,7 @@
       "descriptionSections": [
         {
           "title": "Overview",
-          "content": "A Laravel project crafted by me and my teammate. The goal was to create a functional admin panel for a fictional company where the user can manage products and their categories. From scratch we created a full CRUD system for both products and categories."
+          "content": "A Laravel project crafted by me and my project partner. The goal was to create a functional admin panel for a fictional company where the user can manage products and their categories. From scratch we created a full CRUD system for both products and categories."
         },
         {
           "title": "Tech Stack",
@@ -15,11 +15,15 @@
         },
         {
           "title": "Process",
-          "content": "We started by setting up the Laravel project and designing the database schema for products and categories. We then implemented the CRUD functionality, ensuring that users can easily create, read, update, and delete products and categories. After that, we focused on styling the admin panel with Tailwind CSS to enhance the user experience. Finally, we integrated Chart.js to display sales data in an interactive and visually appealing way. Throughout the development process, we conducted rigorous testing and debugging to ensure that all features work seamlessly and that the user interface is intuitive and responsive."
+          "content": "We started by setting up the Laravel project and designing the database schema for products and categories. We then implemented the CRUD functionality, ensuring that users can easily create, read, update, and delete products and categories. We added a filtering system to allow the user to easily find and manage their products and categories. After that, we focused on styling the admin panel with Tailwind CSS to enhance the user experience. Finally, we integrated Chart.js to display sales data in an interactive and visually appealing way. Throughout the development process, we conducted rigorous testing and debugging to ensure that all features work seamlessly and that the user interface is intuitive and responsive."
         },
         {
           "title": "Results",
-          "content": "The admin panel successfully provides a user-friendly interface for managing products and categories, with all CRUD operations functioning as expected. Our rigerous testing and debugging process ensured a smooth user experience, and the integration of Chart.js allows for insightful data visualization of sales performance. This project pushed my knowlage and showed me how far I've come in just 6 months of learning web development."
+          "content": "The admin panel successfully provides a user-friendly interface for managing products and categories, with all CRUD operations functioning as expected. Our rigerous testing and debugging process ensured a smooth user experience, and the integration of Chart.js allows for insightful data visualization of sales performance. This project pushed my knowlage and showed me how far I've come in just 6 months of learning coding and web development."
+        },
+        {
+          "title": "Reflections",
+          "content": "This project was a great learning experience and provided valuable insights into fullstack develoment with Laravel. It also highlighted the importance of thorough testing and debugging to ensure a smooth user experience.  The effect of scope creep was evident in this project, as we initially had a clear vision but found ourselves adding features and functionality along the way. This was our first major fullstack project, and I am proud of the final result and the skills I gained throughout the development process, and I look forward to applying these skills in future projects."
         }
       ],
       "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Tailwind CSS"],
@@ -29,24 +33,28 @@
     },
     {
       "id": 2,
-      "name": "Yrgopelago",
-      "shortDescription": "A fullstack project for a fictional hotel company called Mos'le Comfortable.",
+      "name": "Mos'le Comfortable",
+      "shortDescription": "A fullstack project for a fictional hotel company called Mos'le Comfortable, featuring a complete hotel booking system with premium services.",
       "descriptionSections": [
         {
           "title": "Overview",
-          "content": "A solo fullstack project for a fictional hotel company called Mos'le Comfortable. The project includes a complete hotel booking system where users can browse available rooms, make reservations, and manage their bookings. Additionally, users can add premium services to their bookings such as breakfast packages and spa access."
+          "content": "A solo fullstack project for a fictional hotel company called Mos'le Comfortable. The project includes a complete hotel booking system where users can browse available rooms, make reservations, and manage their bookings. Additionally, users can add premium services to their bookings such as pool access and rock climbing. The final product is not optimized for mobile devices as the main focus was on creating a functional and user-friendly booking system."
         },
         {
           "title": "Tech Stack",
-          "content": "The project is built with CSS and javascript for the frontend, while the backend is developed using PHP and SQlite database with Composer for dependency management. The application follows a structured architecture to ensure maintainability and scalability."
+          "content": "The project is built with CSS and javascript for the frontend, while the backend is developed using PHP and SQlite database with Composer for dependency management. While the system was only built with 3 rooms, the application follows a structured architecture to ensure scalability and maintainability."
         },
         {
           "title": "Process",
-          "content": "The goal was to create a landing page for desktop where users can easily navigate through the hotel booking system. The development process involved designing a user-friendly interface for browsing rooms and managing reservations, implementing backend logic to handle bookings and premium services, and ensuring seamless integration between the frontend and backend components. Rigorous testing was conducted to ensure that all features function correctly and that the user experience is smooth and intuitive."
+          "content": "The goal was to create a functional hotel booking system that allows users to easily browse avaliable rooms, make reservations and add on services if desired. I started by designing the database schema to manage rooms, bookings, and premium services. Then I implemented the backend logic to handle room availability, booking processing, and service management. The frontend was developed to provide an intuitive user interface for browsing rooms, making reservations, and managing bookings. Throughout the development process, I conducted thorough testing and debugging to ensure that all features work seamlessly and that the user experience is smooth and enjoyable."
         },
         {
           "title": "Results",
-          "content": "The hotel booking system provides a seamless experience for users to browse avaliable rooms and make reservations. The backend checks for room avaliability and processes bookings efficiently, while the frontend offers an intuitive interface for managing reservations and adding premium services. This project pushed my knowlage of fullstack development and provided valuable experience in creating a complete web application from scratch."
+          "content": "The hotel booking system provides a smooth experience for users to browse avaliable rooms and make reservations. The backend checks for room avaliability and processes bookings efficiently, while the frontend offers an intuitive interface for managing reservations and adding premium services. This project pushed my knowlage of fullstack development and provided valuable experience in creating a complete web application from scratch."
+        },
+        {
+          "title": "Reflections",
+          "content": "This project was a significant milestone in my learning journey, as it allowed me to apply my knowledge of both frontend and backend development to create a functional web application. While im happy with the final result, I recognize that there are areas for improvement, such as optimizing the application for mobile devices and expanding on the design. Looking back on the code and the development process, I can see how much I've learned and how far I've come and I'm excited to continue building on this foundation and creating even more complex and polished projects in the future."
         }
       ],
       "tags": ["Fullstack", "SQlite", "JavaScript", "PHP", "Composer"],
@@ -69,14 +77,18 @@
         },
         {
           "title": "Process",
-          "content": "The project involved designing a user-friendly interface for displaying birdcall data, implementing functionality to fetch and display real-time data from the API, and ensuring that the application is responsive and accessible across different devices. I focused on optimizing the user experience by providing clear UI elements and information about the birdcalls fetched from the API."
+          "content": "The project involved finding a fun api to work with and design around it. I started by researching and selecting an animal-sound API that provided interesting sounds from various species all over the world. Then I designed the user interface to display the fetched data in an engaging yet simple way. I implemented a simple form to allow users to filter the fetch data to find specific species or limit the results to a certain region. Throughout the development process, I focused on handling asynchronous data fetching and ensuring that the user interface updates smoothly with the fetched data."
         },
         {
           "title": "Results",
-          "content": "The application successfully interacts with the birdcall API, allowing users to view data about various birds and hear their call. The project provided valuable experience in working with external APIs and handling asynchronous data in JavaScript, resulting in a functional and user-friendly web application."
+          "content": "The application successfully interacts with the birdcall API, allowing users to view data about various species and hear their call. The project provided valuable experience in working with external APIs and handling asynchronous data in JavaScript, resulting in a functional and user-friendly web application."
+        },
+        {
+          "title": "Reflections",
+          "content": "This is a very simple project and I challanged myself to make it as simple and straightforward as possible. The code is efficent and uncomplicated and the css is minimalistic yet optimized for all users. This project was a great learning exprience in not only working with external APIs but also in learning how to create a simple and effective user interface. I am happy with the final result and I plan on making more projects like this in the future."
         }
       ],
-      "tags": ["JavaScript", "Fetch API"],
+      "tags": ["JavaScript", "CSS", "Fetch API"],
       "image": "./assets/images/mockups/API.png",
       "link": "https://api-assignment-eta.vercel.app/",
       "status": "Completed"
@@ -88,7 +100,7 @@
       "descriptionSections": [
         {
           "title": "Overview",
-          "content": "A duo created command-line application built with Node.js for finding optimal travel destinations based on budget and current weather. The application allows users to input their weather preferences and target travel region, it then provides recommendations for travel destinations that offer the best value for money while also considering current weather conditions. The goal of this project was to create a useful tool for travelers looking to maximize their travel experience within their budget constraints."
+          "content": "A duo created command-line application built with Node.js for finding optimal travel destinations based on value for money and weather conditions. The application allows users to input their weather preferences and target travel region, it then provides recommendations for travel destinations that offer the best value for money while also considering current weather conditions. The goal of this project was to create a useful tool for travelers looking to maximize their travel experience within their budget constraints."
         },
         {
           "title": "Tech Stack",
@@ -101,6 +113,10 @@
         {
           "title": "Results",
           "content": "The command-line application successfully provides users with optimal travel destination recommendations based on their region and weather preferences. The integration of real-time data from external APIs allows for accurate and relevant recommendations, making it a valuable tool for travelers looking to maximize their travel experience within their budget constraints. This project provided valuable experience in building a functional command-line application and working with external APIs in a Node.js environment."
+        },
+        {
+          "title": "Reflections",
+          "content": "This was our first CLI project and it opened our eyes to all the npm packages avaliable for building Node.js applications. We learned how to handle user input in a command-line environment, make chained API calls and error handling in a Node.js application. This project can be futher improved by making a more user-friendly interface by making it a web application instead but for a first project working with Node.js and CLI applications, we are happy with the final result and the skills we gained throughout the development process."
         }
       ],
       "tags": ["Node.js", "CLI", "NPM"],

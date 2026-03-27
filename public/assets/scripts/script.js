@@ -33,7 +33,9 @@ function renderProjects(projects) {
         `).join('');
         
         projectEl.innerHTML = `
-            <img src="${project.image}" alt="${project.name}">
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link-overlay" aria-label="View project ${project.name}">
+                <img src="${project.image}" alt="${project.name}">
+            </a>
             <h3>${project.name}</h3>
             <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <div class="card-flex">
