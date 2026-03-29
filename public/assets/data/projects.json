@@ -65,7 +65,7 @@
     {
       "id": 3,
       "name": "Chirper",
-      "shortDescription": "A web application for interacting with a birdcall API.",
+      "shortDescription": "A web application for interacting with a animal-sound API. Users can fetch a random animal-call, filter by species or region.",
       "descriptionSections": [
         {
           "title": "Overview",
