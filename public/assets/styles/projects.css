@@ -1,6 +1,7 @@
 #projects-container {
     display: flex;
     flex-wrap: nowrap;
+    max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
@@ -11,6 +12,32 @@
 }
 
 @media (max-width: 999px) {
+    #projects .cases-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #projects .cases-scroll-arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--highlight-color);
+        font-size: 2rem;
+        line-height: 1;
+        transform: translateY(1px) rotate(0deg);
+        transform-origin: center;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    #projects .cases-scroll-arrow.point-left {
+        transform: translateY(1px) rotate(180deg);
+    }
+
+    #projects .cases-scroll-arrow.is-hidden {
+        opacity: 0;
+    }
+
     #projects h2 {
         --cases-progress: 0%;
         position: relative;

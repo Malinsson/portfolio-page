@@ -60,14 +60,17 @@ function renderProjects(projects) {
 function setupCasesProgressUnderline() {
     const container = document.getElementById('projects-container');
     const heading = document.querySelector('#projects h2');
+    const arrow = heading?.querySelector('.cases-scroll-arrow');
 
-    if (!container || !heading) {
+    if (!container || !heading || !arrow) {
         return;
     }
 
     const updateProgress = () => {
         if (window.matchMedia('(min-width: 1000px)').matches) {
             heading.style.setProperty('--cases-progress', '0%');
+            arrow.classList.add('is-hidden');
+            arrow.classList.remove('point-left');
             return;
         }
 
@@ -75,6 +78,17 @@ function setupCasesProgressUnderline() {
         const progress = maxScroll > 0 ? (container.scrollLeft / maxScroll) * 100 : 0;
         const safeProgress = Math.max(0, Math.min(100, progress));
         heading.style.setProperty('--cases-progress', `${safeProgress}%`);
+
+        const hasHorizontalScroll = maxScroll > 1;
+        arrow.classList.toggle('is-hidden', !hasHorizontalScroll);
+
+        if (!hasHorizontalScroll) {
+            arrow.classList.remove('point-left');
+            return;
+        }
+
+        const isAtRightEnd = container.scrollLeft >= maxScroll - 1;
+        arrow.classList.toggle('point-left', isAtRightEnd);
     };
 
     container.addEventListener('scroll', updateProgress, { passive: true });
