@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sections = document.querySelectorAll('main section');
     const yearEl = document.getElementById('year');
     const techLogos = document.querySelectorAll('#stack .tech-logos img');
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+    const head = document.querySelector('header');
 
     if (yearEl) {
         yearEl.textContent = String(new Date().getFullYear());
@@ -112,6 +115,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    function closeMobileMenu() {
+        if (!hamburger || !nav || !head) {
+            return;
+        }
+
+        nav.classList.remove('open');
+        hamburger.classList.remove('open');
+        head.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault();
@@ -119,7 +133,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             const target = document.getElementById(targetId);
 
             if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                closeMobileMenu();
+
+                const headerHeight = head ? head.getBoundingClientRect().height : 0;
+                const headerOffset = headerHeight + 16;
+                const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: Math.max(0, targetTop),
+                    behavior: 'smooth'
+                });
+
                 history.replaceState(null, '', `#${targetId}`);
                 setActiveLink(targetId);
             }
@@ -141,25 +165,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const initialId = (window.location.hash || '#hero').slice(1);
     setActiveLink(initialId);
 
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.querySelector('nav');
-    const head = document.querySelector('header');
-
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
             const isOpen = nav.classList.toggle('open');
             hamburger.classList.toggle('open', isOpen);
             head.classList.toggle('open', isOpen);
             hamburger.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                hamburger.classList.remove('open');
-                head.classList.remove('open');
-                hamburger.setAttribute('aria-expanded', 'false');
-            });
         });
     }
 
