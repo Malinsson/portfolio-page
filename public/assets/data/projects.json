@@ -33,6 +33,37 @@
     },
     {
       "id": 2,
+      "name": "Ta en öl med YRGO",
+      "shortDescription": "A mobile social mingel app for YRGO students to connect with the IT companies in Gothenburg and beyond.",
+      "descriptionSections": [
+        {
+          "title": "Overview",
+          "content": "Ta en öl med YRGO is an app designed to facilitate social mingling between YRGO students and IT companies in Gothenburg and beyond. The app allows students and companies to create a personalized beer can with their name and a short description, which can be shared with others to spark conversations and connections in a more personal way. The goal of the app is to create a fun and engaging platform for students and companies to connect, network, and build relationships within the IT industry."
+        },
+        {
+          "title": "Tech Stack",
+          "content": "The mobile app is built with React for the frontend, utilizing Tailwind CSS for styling. The backend is powered by Supabase, which provides a robust and scalable database solution for managing user data and interactions. Vercel BLOB Storage is used to handle image uploads and storage for the personalized beer cans. We have also integrated several npm packages to enhance the functionality and user experience of the app, such as qr-code generation, image cropping and scaling, and design state management."
+        },
+        {
+          "title": "Process",
+          "content": "The development process started with brainstorming together with the digital design students to come up with a unique and engaging concept for the app. We then listed the features we wanted to include and other requirements for the app, as well as limitations and constraints. After that we started the development process by setting up the React frontend and integrating it with the Supabase backend. We implemented the core features of the app, including user authentication, beer can creation, and social sharing functionality. We also integrated Vercel BLOB Storage to handle image uploads for the personalized beer cans."
+        },
+        {
+          "title": "Results",
+          "content": "The app successfully facilitates social mingling between YRGO students and IT companies, providing a platform for meaningful connections and networking opportunities. The personalized beer cans have become a popular feature, encouraging users to engage with each other and share their experiences."
+        },
+        {
+          "title": "Reflections",
+          "content": "Our assigment had very open requirements and we had a lot of freedom in the development process, which was both exciting and challenging. We had to make a lot of decisions along the way, and it was a great learning experience to navigate through the development process with such open-ended requirements. Digital design students were responsible for the design and we were responsible for the development, which was a great way to collaborate and learn from each other. Our idea was ambitious and we had to make some compromises along the way, but we are proud of the final result and the skills we gained throughout the development process!"
+        }
+      ],
+      "tags": ["React", "Tailwind CSS", "Supabase", "Vercel BLOB Storage"],
+      "image": "./assets/images/mockups/mingel.png",
+      "link": "https://have-a-beer-with-me.vercel.app/",
+      "status": "Completed"
+    },
+    {
+      "id": 3,
       "name": "Mos'le Comfortable",
       "shortDescription": "A fullstack project for a fictional hotel company called Mos'le Comfortable, featuring a complete hotel booking system with premium services.",
       "descriptionSections": [
@@ -60,37 +91,6 @@
       "tags": ["Fullstack", "SQlite", "JavaScript", "PHP", "Composer"],
       "image": "./assets/images/mockups/yrgopelago.png",
       "link": "https://malinsson.se/yrgopelago/",
-      "status": "Completed"
-    },
-    {
-      "id": 3,
-      "name": "Chirper",
-      "shortDescription": "A web application for interacting with a animal-sound API. Users can fetch a random animal-call, filter by species or region.",
-      "descriptionSections": [
-        {
-          "title": "Overview",
-          "content": "My first project working with external APIs and real-time data integration. The application allows users to interact with a birdcall API, fetching and displaying data about various birds and their calls. The goal with this project was to solve a problem and learn how to manage external API calls."
-        },
-        {
-          "title": "Tech Stack",
-          "content": "Built with vanilla JavaScript and the Fetch API to master asynchronous data fetching and DOM manipulation."
-        },
-        {
-          "title": "Process",
-          "content": "The project involved finding a fun api to work with and design around it. I started by researching and selecting an animal-sound API that provided interesting sounds from various species all over the world. Then I designed the user interface to display the fetched data in an engaging yet simple way. I implemented a simple form to allow users to filter the fetch data to find specific species or limit the results to a certain region. Throughout the development process, I focused on handling asynchronous data fetching and ensuring that the user interface updates smoothly with the fetched data."
-        },
-        {
-          "title": "Results",
-          "content": "The application successfully interacts with the birdcall API, allowing users to view data about various species and hear their call. The project provided valuable experience in working with external APIs and handling asynchronous data in JavaScript, resulting in a functional and user-friendly web application."
-        },
-        {
-          "title": "Reflections",
-          "content": "This is a very simple project and I challanged myself to make it as simple and straightforward as possible. The code is efficent and uncomplicated and the css is minimalistic yet optimized for all users. This project was a great learning exprience in not only working with external APIs but also in learning how to create a simple and effective user interface. I am happy with the final result and I plan on making more projects like this in the future."
-        }
-      ],
-      "tags": ["JavaScript", "CSS", "Fetch API"],
-      "image": "./assets/images/mockups/API.png",
-      "link": "https://api-assignment-eta.vercel.app/",
       "status": "Completed"
     },
     {
