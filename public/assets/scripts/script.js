@@ -2,10 +2,12 @@ function toggleDescription(button) {
     const card = button.closest('.project-card');
     const modal = card.querySelector('.description-modal');
     modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeModal(modal) {
     modal.classList.remove('open');
+    document.body.style.overflow = '';
 }
 
 async function fetchProjects() {

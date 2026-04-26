@@ -2,37 +2,6 @@
   "projects": [
     {
       "id": 1,
-      "name": "Glas Olsson",
-      "shortDescription": "A Laravel project for a fictional company with a functional admin panel to manage products and categories.",
-      "descriptionSections": [
-        {
-          "title": "Overview",
-          "content": "A Laravel project crafted by me and my project partner. The goal was to create a functional admin panel for a fictional company where the user can manage products and their categories. From scratch we created a full CRUD system for both products and categories."
-        },
-        {
-          "title": "Tech Stack",
-          "content": "The website is built with Laravel and uses SQlite as the database, following the MVC model for secure routes. Tailwind CSS is used for styling to create a clean and responsive design. The Chart.js library is integrated to visualize sales data and provide insights into product performance."
-        },
-        {
-          "title": "Process",
-          "content": "We started by setting up the Laravel project and designing the database schema for products and categories. We then implemented the CRUD functionality, ensuring that users can easily create, read, update, and delete products and categories. We added a filtering system to allow the user to easily find and manage their products and categories. After that, we focused on styling the admin panel with Tailwind CSS to enhance the user experience. Finally, we integrated Chart.js to display sales data in an interactive and visually appealing way. Throughout the development process, we conducted rigorous testing and debugging to ensure that all features work seamlessly and that the user interface is intuitive and responsive."
-        },
-        {
-          "title": "Results",
-          "content": "The admin panel successfully provides a user-friendly interface for managing products and categories, with all CRUD operations functioning as expected. Our rigerous testing and debugging process ensured a smooth user experience, and the integration of Chart.js allows for insightful data visualization of sales performance. This project pushed my knowlage and showed me how far I've come in just 6 months of learning coding and web development."
-        },
-        {
-          "title": "Reflections",
-          "content": "This project was a great learning experience and provided valuable insights into fullstack develoment with Laravel. It also highlighted the importance of thorough testing and debugging to ensure a smooth user experience.  The effect of scope creep was evident in this project, as we initially had a clear vision but found ourselves adding features and functionality along the way. This was our first major fullstack project, and I am proud of the final result and the skills I gained throughout the development process, and I look forward to applying these skills in future projects."
-        }
-      ],
-      "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Tailwind CSS"],
-      "image": "./assets/images/mockups/glasolsson.png",
-      "link": "https://github.com/Malinsson/Glasolsson",
-      "status": "Completed"
-    },
-    {
-      "id": 2,
       "name": "Ta en öl med YRGO",
       "shortDescription": "A mobile social mingel app for YRGO students to connect with the IT companies in Gothenburg and beyond.",
       "descriptionSections": [
@@ -60,6 +29,37 @@
       "tags": ["React", "Tailwind CSS", "Supabase", "Vercel BLOB Storage"],
       "image": "./assets/images/mockups/mingel.png",
       "link": "https://have-a-beer-with-me.vercel.app/",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+            "name": "Glas Olsson",
+      "shortDescription": "A Laravel project for a fictional company with a functional admin panel to manage products and categories.",
+      "descriptionSections": [
+        {
+          "title": "Overview",
+          "content": "A Laravel project crafted by me and my project partner. The goal was to create a functional admin panel for a fictional company where the user can manage products and their categories. From scratch we created a full CRUD system for both products and categories."
+        },
+        {
+          "title": "Tech Stack",
+          "content": "The website is built with Laravel and uses SQlite as the database, following the MVC model for secure routes. Tailwind CSS is used for styling to create a clean and responsive design. The Chart.js library is integrated to visualize sales data and provide insights into product performance."
+        },
+        {
+          "title": "Process",
+          "content": "We started by setting up the Laravel project and designing the database schema for products and categories. We then implemented the CRUD functionality, ensuring that users can easily create, read, update, and delete products and categories. We added a filtering system to allow the user to easily find and manage their products and categories. After that, we focused on styling the admin panel with Tailwind CSS to enhance the user experience. Finally, we integrated Chart.js to display sales data in an interactive and visually appealing way. Throughout the development process, we conducted rigorous testing and debugging to ensure that all features work seamlessly and that the user interface is intuitive and responsive."
+        },
+        {
+          "title": "Results",
+          "content": "The admin panel successfully provides a user-friendly interface for managing products and categories, with all CRUD operations functioning as expected. Our rigerous testing and debugging process ensured a smooth user experience, and the integration of Chart.js allows for insightful data visualization of sales performance. This project pushed my knowlage and showed me how far I've come in just 6 months of learning coding and web development."
+        },
+        {
+          "title": "Reflections",
+          "content": "This project was a great learning experience and provided valuable insights into fullstack develoment with Laravel. It also highlighted the importance of thorough testing and debugging to ensure a smooth user experience.  The effect of scope creep was evident in this project, as we initially had a clear vision but found ourselves adding features and functionality along the way. This was our first major fullstack project, and I am proud of the final result and the skills I gained throughout the development process, and I look forward to applying these skills in future projects."
+        }
+      ],
+      "tags": ["Laravel", "Fullstack", "PHP", "SQlite", "Tailwind CSS"],
+      "image": "./assets/images/mockups/glasolsson.png",
+      "link": "https://github.com/Malinsson/Glasolsson",
       "status": "Completed"
     },
     {
